@@ -1,0 +1,5 @@
+digraph "CFG for 'square' function" {
+	label="CFG for 'square' function";
+
+	Node0x1f82b500 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%1:\l  %2 = mul nsw i32 %0, %0\l  ret i32 %2\l}"];
+}
