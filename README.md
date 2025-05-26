@@ -1,4 +1,4 @@
-## Лабораторная работа №7: Преобразование и анализ кода с использованием Clang и LLVM
+![image](https://github.com/user-attachments/assets/0961a661-6eb6-4f6a-a5cd-f51367fc9b25)## Лабораторная работа №7: Преобразование и анализ кода с использованием Clang и LLVM
 
 **Тема:** Преобразование и анализ кода с использованием Clang и LLVM.
 
@@ -116,22 +116,23 @@ int main() {
 
 Команда для установки библиотеки Graphviz: ```sudo apt install graphviz```
 
-![Установка библиотеки Graphviz](/README_images/installing_'Graphviz'_library.png)
+![Установка библиотеки Graphviz](https://github.com/Vikoops/LR7/blob/main/image/step6_2.png)
 
 Команды для преобразования файлов с расширением .dot в .png с помощью Graphviz:
    - ```dot -Tpng .main.dot -o cfg_main.png```
    - ```dot -Tpng .square.dot -o cfg_square.png```
 
-![Преобразования файлов .dot в .png](/README_images/converting_'.dot'_files_to_'.png'.png)
+![Преобразования файлов .dot в .png](https://github.com/Vikoops/LR7/blob/main/image/step6_3.png)
+![](https://github.com/Vikoops/LR7/blob/main/image/step6_4.png)
 
 Команды для просмотра файлов с CGF:
    - ```xdg-open cfg_main.png```
 
-![Просмотр файла cfg_main.png](/README_images/viewing_'cfg_main.png'_file.png)
+![Просмотр файла cfg_main.png](https://github.com/Vikoops/LR7/blob/main/image/step6_5.png)
 
    - ```xdg-open cfg_square.png```
 
-![Просмотр файла cfg_square.png](/README_images/viewing_'cfg_square.png'_file.png)
+![Просмотр файла cfg_square.png](https://github.com/Vikoops/LR7/blob/main/image/step6_6.png)
 
 Стоит отметить, что в LLVM каждый граф потока управления (CFG) строится на уровне функции, поскольку структура управления всегда локальна для тела функции. Для получения полного представления о программе, нужно построить CFG для всех функций и анализировать их совокупность. Автоматическое объединение всех CFG в один граф не предусмотрено в LLVM по умолчанию.
 
@@ -152,34 +153,6 @@ dot -Tpng .square.dot -o cfg_square.png
 xdg-open cfg_main.png
 xdg-open cfg_square.png
 ```
-
-### Скриншоты работы
-
-![Установка инструментов](/README_images/installing_tools.png)
-
-![Файл main.c](/README_images/'main.c'_file.png)
-
-![Получение AST](/README_images/getting_AST.png)
-
-![Генерация LLVM IR](/README_images/LLVM_IR_generation.png)
-
-![Файл main_O0.ll](/README_images/'main_O0.ll'_file.png)
-
-![Файл main_O2.ll](/README_images/'main_O2.ll'_file.png)
-
-![Сравнение двух файлов](/README_images/comparing_two_files.png)
-
-![Генерация .dot-файлов](/README_images/generating_'.dot'_files.png)
-
-![.dot-файлы](/README_images/'.dot'_files.png)
-
-![Установка библиотеки Graphviz](/README_images/installing_'Graphviz'_library.png)
-
-![Преобразования файлов .dot в .png](/README_images/converting_'.dot'_files_to_'.png'.png)
-
-![Просмотр файла cfg_main.png](/README_images/viewing_'cfg_main.png'_file.png)
-
-![Просмотр файла cfg_square.png](/README_images/viewing_'cfg_square.png'_file.png)
 
 ### Промежуточные выводы по каждому заданию
 
