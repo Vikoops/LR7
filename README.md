@@ -87,13 +87,13 @@ int main() {
    - Никаких переменных, alloca, store, load - всё удалено (оптимизации -mem2reg, -dce);
    - Остался только вызов printf(25).
 
-![Файл main_O2.ll](/README_images/'main_O2.ll'_file.png)
+![Файл main_O2.ll](https://github.com/Vikoops/LR7/blob/main/image/step5_1.png)
 
 Команда: ```diff main_O0.ll main_O2.ll```
 
 Сравнение двух файлов:
 
-![Сравнение двух файлов](/README_images/comparing_two_files.png)
+![Сравнение двух файлов](https://github.com/Vikoops/LR7/blob/main/image/step5_2.png)
 
 Стоит отметить, что после оптимизации произошли следующие изменения:
    - Переменные типа alloca были удалены;
@@ -106,13 +106,13 @@ int main() {
 
 Команда для генерации .dot-файлов CFG для функций: ```opt -dot-cfg -disable-output main.ll```
 
-![Генерация .dot-файлов](/README_images/generating_'.dot'_files.png)
+![Генерация .dot-файлов](https://github.com/Vikoops/LR7/blob/main/image/step6.png)
 
 Эта команда создаст DOT-файлы:
    - .main.dot - для функции main;
    - .square.dot - для square, если она не была удалена оптимизацией.
 
-![.dot-файлы](/README_images/'.dot'_files.png)
+![.dot-файлы](https://github.com/Vikoops/LR7/blob/main/image/step6_1.png)
 
 Команда для установки библиотеки Graphviz: ```sudo apt install graphviz```
 
